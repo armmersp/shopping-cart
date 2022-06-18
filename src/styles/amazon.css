@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  section {
+    width: 93%;
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    margin-left:100px;
+    margin-right:100px;
+  }
+  .cards {
+    width: 250px;
+    padding: 20px;
+
+  }
+
+  .show-after-hover{
+    display: none;
+}
+  .move-button-to-center{
+  display: flex;
+  justify-content: center;
+
+}
+
+  .cards:hover .show-after-hover{
+  display: inline;
+  justify-content: center;
+}
+  .cards:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 16px;
+    cursor: pointer;
+  }
+  .image_box img {
+    width: 150px;
+    height: 250px;
+    display: flex;
+    
+  }
+  
+  .details p:nth-child(1) {
+    font-weight: bold;
+  }
+  .details p:nth-child(2) {
+    color: grey;
+    font-size: 0.8rem;
+  }
+  .details p:nth-child(3) {
+    font-weight: bolx;
+    color: grey;
+  }
+  .details button {
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    background-color: skyblue;
+    outline: none; 
+  }
+
+  /*  */
+
+  .flex{
+    display: flex;
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+
+  .line-through{
+    text-decoration: line-through;
+  }
+
+  .grey{
+    color: grey;
+  }
+
+  .margin-left-32{
+    margin-left: 32px;
+  }
+
+  .margin-top-16{
+    margin-top: 16px;
+  }
+  .center-picture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .add-to-cart-style{
+
+    width: 160px;
+    border-radius: 20px;
+    height: 40px;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+.center-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+    align-items: center;
+    margin: auto;
+}
+
+.shopping-cart-icon{
+    transform: scaleX(-1);
+    color: blue;
+}
+
+.add-to-cart-text{
+    color: blue;
+}
+
+.fs-32{
+  font-size: 32px;
+}
+
+.available-product-button{
+    color: #78A962;
+    margin-bottom: 12px;
+    margin-left: 24px;
+}
+
+.center-icon{
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+
+}
+
+.icon-rotate{
+  transform: scaleX(-1);
+  color: blue;
+}
+
+.text-blue-color{
+  color: blue;
+}
+
+/* APP.JS */
+
+.background-cover{
+  width: 100%;
+  height: 360px;
+  background-color: grey;
+}
+
+.homepage-space{
+  margin-left: 100px;
+  margin-right: 100px;
+  
+}
+
+.top-space{
+  margin-top: 40px;
+}
+
+.topic-text{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.flex-space-between{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.margin-top-12{
+  margin-top: 4px;
+}
