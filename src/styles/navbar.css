@@ -9,6 +9,7 @@ nav {
     background-color: white;
     position: fixed;
     z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 20px;
 }
 
 .nav-space{
@@ -17,12 +18,12 @@ nav {
 }
 /* Every span in nav-left class */
 .nav-left > span{
-    margin-right: 48px;
+    margin-right: 32px;
 }
 
-/* .nav-right{
-    
-} */
+.nav-right > span{
+    margin-right: 48px;
+}
 
 .nav_box{
     padding: 0px 100px 0px 100px;
@@ -31,13 +32,15 @@ nav {
     align-items: center;
     justify-content: space-between;
     line-height: 60px;
+    align-items: stretch;
 }
 
 .my_shop{
-    font-size: 1.5rem;
+    font-size: 36px;
     font-weight: bold;
     color: black;
     cursor: pointer;
+    
 }
 
 .cart{

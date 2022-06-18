@@ -25,11 +25,13 @@ const Cart = ({ cart, setCart, handleChange }) => {
       <div className="showbackground">
         <div className="fs-32 bold">ตะกร้าสินค้า</div>
         <div className="flex">
-          <div className="width-50">50%</div>
-          <div className="flex spacebetween">
-            <div>ราคา</div>
-            <div>จำนวน</div>
-            <div>ยอดรวม</div>
+          <div className="cart_box">
+            สินค้า
+            <div className="flex spacebetween bold">
+              <div>ราคา</div>
+              <div>จำนวน</div>
+              <div>ยอดรวม</div>
+            </div>
           </div>
         </div>
         {cart.map((item) => (
@@ -46,8 +48,8 @@ const Cart = ({ cart, setCart, handleChange }) => {
               <button onClick={() => handleChange(item, -1)}>-</button>
             </div>
             <div>
-              <CancelOutlinedIcon onClick={() => handleRemove(item.id)} />
               <span>TOTAL: {item.price}</span>
+              <CancelOutlinedIcon onClick={() => handleRemove(item.id)} />
               {/* <button onClick={() => handleRemove(item.id)}>Remove</button> */}
             </div>
           </div>
@@ -59,19 +61,21 @@ const Cart = ({ cart, setCart, handleChange }) => {
         </div>
         <div className="order-summary-card">
           <div className="fs-32 bold">สรุปคำสั่งซื้อ</div>
-          <div className="flex">
+          <div className="flex space-between top-space">
             <div className="bold">ยอดรวม</div>
             <div className="bold">THB{price}</div>
           </div>
-          <div className="flex">
-            <div className="bold">ค่าส่ง</div>
-            <div className="bold">THB1.00</div>
+          <div className="flex space-between">
+            <div className="bold margin-top-16">ค่าส่ง</div>
+            <div className="bold margin-top-16">THB1.00</div>
           </div>
-          <div className="bold flex">
-            <div className="space-between">ยอดสุทธิ</div>
-            <div className="space-between">THB - {price + 1}</div>
+          <div className="bold flex space-between">
+            <div className="space-between margin-top-48">ยอดสุทธิ</div>
+            <div className="space-between margin-top-48">THB - {price + 1}</div>
           </div>
-          <div className="payment-button margin-top-16 bold">ไปชำระเงิน</div>
+          <div className="payment-button margin-top-16 bold margin-top-48">
+            ไปชำระเงิน
+          </div>
         </div>
       </div>
     </>

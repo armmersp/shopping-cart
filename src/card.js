@@ -6,6 +6,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 const Cards = ({ item, handleClick }) => {
   const { id, title, img, discountPrice, price, ratingValue, reviewValue } =
     item;
+
   return (
     <div className="cards">
       <div className="available-product-button">
@@ -32,9 +33,9 @@ const Cards = ({ item, handleClick }) => {
         <div name="read-only" value={ratingValue} readOnly />
         <p className="grey margin-left-32">Review ({reviewValue})</p>
       </div>
-      <p className="bold">{title}</p>
-      <p className="line-through grey margin-top-16">THB{price}</p>
-      <p className="bold">THB{discountPrice}</p>
+      <div className="bold">{title}</div>
+      <div className="line-through grey margin-top-16">THB{price}</div>
+      <div className="bold">THB{discountPrice}</div>
 
       {/* <AddToCartButton /> */}
     </div>

@@ -2,7 +2,7 @@ import { React, useEffect, useState } from "react";
 import Navbar from "./components/navbar";
 import Cart from "./components/cart";
 import Amazon from "./components/amazon";
-
+import Amazon2 from "./components/Amazon2";
 // import RecommendSeller from "./bestSellerProducts";
 // import BestSeller from "./components/bestSellerList";
 const App = () => {
@@ -44,14 +44,21 @@ const App = () => {
       ) : (
         <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
       )}
+
+      <div className="flex-space-between">
+        <div className="topic-text">สินค้าแนะนำ</div>
+        <div className="sub-topic-text">ดูสินค้าขายดีทั้งหมด</div>
+      </div>
+      {show ? (
+        <Amazon2 handleClick={handleClick} />
+      ) : (
+        <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+      )}
       {/* <Navbar setShow={setShow} size={cart.length} /> */}
-      {/* <Amazon handleClick={handleClick} />
-        <div className="flex-space-between">
-          <div className="topic-text">สินค้าขายดี</div>
-          <div className="sub-topic-text">ดูสินค้าขายดีทั้งหมด</div>
-        </div>
-        <RecommendSeller handleClick={handleClick} />
-      </div> */}
+      {/* <Amazon handleClick={handleClick} /> */}
+
+      {/* <RecommendSeller handleClick={handleClick} /> */}
+      {/* </div> */}
     </>
   );
 };

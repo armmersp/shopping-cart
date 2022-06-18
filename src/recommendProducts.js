@@ -3,7 +3,7 @@ const recommendProducts = [
     id: "1",
     title: " Demon Slayer Book No. 16 ",
     img: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974714773/demon-slayer-kimetsu-no-yaiba-vol-16-9781974714773_lg.jpg",
-    price: 499.0,
+    price: 599.0,
     discountPrice: 499.0,
     ratingValue: 5,
     reviewValue: 233,
@@ -13,7 +13,7 @@ const recommendProducts = [
     id: "3",
     title: "Demon Slayer Book No. 21",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIlsS_ViwETwFTYxwhwukwOYxLppEGT-sYWNiISXeyRilQLAYksfwCgzSIZWdOi5N1FfU&usqp=CAU",
-    price: 499.0,
+    price: 599.0,
     discountPrice: 499.0,
     ratingValue: 4,
     reviewValue: 123,
@@ -21,9 +21,9 @@ const recommendProducts = [
   },
   {
     id: "4",
-    title: "Demon Slayer Book No. 8",
+    title: "Demon Slayer Book No. 38",
     img: "https://images.squarespace-cdn.com/content/v1/571abd61e3214001fb3b9966/bd951f1f-2fcd-4bd8-a44d-d5cc66b4bda0/Demon+Slayer+Stories+of+Water+and+Flame",
-    price: 499.0,
+    price: 599.0,
     discountPrice: 499.0,
     ratingValue: 3,
     reviewValue: 485,
@@ -32,9 +32,9 @@ const recommendProducts = [
   {
     id: "5",
 
-    title: "Demon Slayer Book No. 14",
+    title: "Demon Slayer Book No. 8",
     img: "https://images-na.ssl-images-amazon.com/images/I/81CcEq7wQPL.jpg",
-    price: 499.0,
+    price: 599.0,
     discountPrice: 499.0,
     ratingValue: 5,
     reviewValue: 436,
@@ -42,14 +42,14 @@ const recommendProducts = [
   },
   {
     id: "7",
-    title: "แฮร์รี่ พอตเตอร์กับภาคีนกฟีนิกซ์",
+    title: "Demon Slayer Book No. 14",
     img: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974711147/demon-slayer-kimetsu-no-yaiba-vol-14-9781974711147_hr.jpg",
-    price: 499.0,
+    price: 599.0,
     discountPrice: 499.0,
     ratingValue: 5,
     reviewValue: 222,
     amount: 1,
-  },  
+  },
 ];
 
 export default recommendProducts;

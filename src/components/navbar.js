@@ -17,7 +17,7 @@ const navbar = ({ setShow, size }) => {
             <span>สินค้าลดราคา</span>
             <span>สินค้าแนะนำ</span>
           </div>
-          <div className="nav-right flex">
+          <div className="nav-right">
             <div></div>
             <span>
               <SearchIcon />{" "}

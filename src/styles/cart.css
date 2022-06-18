@@ -31,7 +31,6 @@
     /* background-color: cadetblue; */
     width:65%;
     justify-content: space-between;
-    margin-top: 20px;
     border-bottom: 2px solid grey;
     padding-bottom: 20px;
   }
@@ -113,8 +112,8 @@
   display: flex;
   background-color: rgb(23, 0, 108);
   margin-left: 48px;
-  height: 48px;
-  width: 300px;
+  height: 50px;
+  width: 313px;
   border-radius: 56px;
   align-items: center;
   justify-content: center;
@@ -139,10 +138,10 @@
 }
 
 .order-summary-card{
-  /* background-color: aqua; */
-  width: 25%;
-  height: 260px;
-  padding: 15px;
+  background-color: aqua;
+  width: 362px;
+  height: 377px;
+  padding: 25px;
   position: absolute;
   top: 155px;
   right: 160px;

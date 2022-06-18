@@ -35,8 +35,8 @@
     cursor: pointer;
   }
   .image_box img {
-    width: 150px;
-    height: 250px;
+    width: 234px;
+    height: 355px;
     display: flex;
     
   }
@@ -84,6 +84,10 @@
 
   .margin-top-16{
     margin-top: 16px;
+  }
+
+  .margin-top-48{
+    margin-top: 48px;
   }
   .center-picture{
     display: block;
