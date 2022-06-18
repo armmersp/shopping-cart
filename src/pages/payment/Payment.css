@@ -1,0 +1,167 @@
+.grid-payment {
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-rows: 50px minmax(160px, auto) auto;
+    grid-template-areas: 
+      'header header'
+      'main rightbar'
+      'footer footer';
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+  
+  .page-header-payment {
+    grid-area: header;
+  }
+  
+  .page-rightbar-payment {
+    grid-area: rightbar;
+  }
+  
+  .page-main-payment {
+    grid-area: main;
+  } */
+  
+  .page-footer-payment {
+    grid-area: footer;
+  }
+  
+  .content-payment {
+    color: #242424;
+    /* background-color: #65a5b7; */
+    font-weight: 200;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .half-text-field-last{
+    width: 350px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: white; 
+    border: #242424;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .full-text-field-last{
+    width: 740px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: white;
+    border: #242424;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .box{
+    background-color: aqua;
+  }
+
+  .row-address-input{
+    display: flex;
+  }
+
+  .text-align-left{
+    text-align: left;
+  }
+
+  .space-between-item{
+    margin-left: 36px;
+  }
+
+  .box-payment-selected{
+    
+    width: 50%;
+    height: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: darkblue;
+  }
+
+  .box-payment{
+    
+    width: 50%;
+    height: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+  }
+
+
+  .red-text-style{
+    color: red;
+    font-weight: lighter;
+  }
+
+  .payment-topic-style{
+    font-size: 32px;
+    margin-top: 10px;
+  }
+
+  .type-of-shipping-space{
+    margin-top: 24px;
+  }
+  
+  .type-of-shipping-content-left{
+    text-align: start;
+    margin-left: 64px;
+    /* background-color: aliceblue; */
+    width: 40%;
+  }
+
+  .flex{
+    display: flex;
+    align-items: normal;
+    margin: 32px;
+    
+  }
+
+  .circle{
+
+        height: 31px;
+        width: 31px;
+        background-color: white;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.4;
+  }
+
+  .circle-icon{
+    height: 31px;
+        width: 31px;
+        background-color: white;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+        display: inline-block;
+  }
+
+  .kerry-style{
+    width: 140px;
+    height: 70px;
+    margin-bottom: 96px;
+  }
+
+  .grey-line{
+    width: 730px;
+    height: 0;
+    background-color: aqua;
+    border: 1px solid #CCCCCC;
+    
+  }
+
+  .flex-item-center{
+    display: flex;
+    align-items: center;
+  }
+
+  .margin-left{
+    margin-left: 12px;
+  }

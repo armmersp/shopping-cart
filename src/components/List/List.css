@@ -1,0 +1,26 @@
+.list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.topic-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topic-text{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sub-topic-text{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.list-wrapper{
+    display: flex;
+    overflow: scroll;
+}

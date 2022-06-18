@@ -1,0 +1,165 @@
+.product-picture{
+    width: 23%;
+    height: 600px;
+    margin-left: 200px;
+    margin-top: 64px;
+    object-fit: contain;
+}
+
+.product-detail-name{
+    margin-left: 64px;
+    margin-top: 64px;
+    margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.product-detail{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 64px;
+}
+
+
+.price-text{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 64px;
+    margin-top: 64px;
+}
+
+.price-thb{
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    margin-top: 64px;
+    
+}
+
+.price-thb-discount{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-top: 64px;
+    text-decoration: line-through;
+    color: rgb(101, 101, 101)
+}
+
+.container-product-content{
+    display: flex;
+}
+
+
+
+.price-in-row{
+    display: flex;
+}
+
+.input-number{
+    margin-left: 64px;
+    margin-top: 32px;
+    display: flex;
+}
+
+.add-button{
+    display: flex;
+    background-color: #0156FF;
+    margin-left: 48px;
+    height: 56px;
+    width: 240px;
+    border-radius: 56px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.wishlist-button{
+    display: flex;
+    background-color: #F2994A;
+    margin-left: 48px;
+    height: 56px;
+    width: 240px;
+    border-radius: 56px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.sub-product-picture{
+    background-color: rgb(72, 81, 78);
+    width: 9%;
+    height: 250px;
+    margin-left: 200px;
+    margin-top: 32px;
+}
+
+.behind-sub-product-picture{
+    background-color: rgb(236, 114, 43);
+    width: 9%;
+    height: 250px;
+    margin-left: 64px;
+    margin-top: 32px;
+    opacity: 0.4;
+}
+
+.row-sub-product-picture{
+    display: flex;
+}
+
+.about-product-detail{
+    font-weight: bold;
+    margin-left: 200px;
+    margin-top: 32px;
+}
+
+.about-product-sub-detail{
+    font-weight: bold;
+    margin-left: 24px;
+    margin-top: 32px;
+    opacity: 0.7;
+}
+
+.row-about-product-detail{
+    display: flex;
+}
+
+.book-detail{
+    width: 60%;
+    margin-left: 200px;
+    margin-top: 32px;
+}
+
+.topic-book-detail{
+    width: 60%;
+    margin-left: 200px;
+    margin-top: 32px;
+    font-weight: bold;
+}
+
+.relative-item{
+    display: flex;
+    margin-left: 190px;
+    margin-right: 100px;
+    
+}
+
+.detail-topic-text{
+    display: flex;
+    margin-left: 200px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.heart-icon-style{
+    margin-right: 12px;
+}

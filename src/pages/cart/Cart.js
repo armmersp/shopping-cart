@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/cart.css";
+import "./Cart.css";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0);
@@ -22,7 +22,59 @@ const Cart = ({ cart, setCart, handleChange }) => {
 
   return (
     <>
-      <div className="showbackground">
+      <div className="cart-container">
+        <div className="cart-topic">ตะกร้าสินค้า</div>
+        <div className="summary-container">
+          <div>
+            <table className="cart-table">
+              <tr className="cart-table-header">
+                <th>สินค้า</th>
+                <th>ราคา</th>
+                <th>จำนวน</th>
+                <th>ยอดรวม</th>
+                <th></th>
+              </tr>
+              {cart.map((item) => (
+                <tr className="cart-table-body">
+                  <td>
+                    <div className="cart-detail">
+                      <img src={item.img} alt="" />
+                      <p>{item.title}</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="cart-price-table">THB{item.price}</div>
+                  </td>
+                  <td>
+                    <div className="cart-input-button">
+                      <button onClick={() => handleChange(item, 1)}>+</button>
+                      <button>{item.amount}</button>
+                      <button onClick={() => handleChange(item, -1)}>-</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="cart-total-price-table">
+                      TOTAL: {item.price}
+                    </div>
+                  </td>
+                  <td>
+                    <div className="cart-action-table">
+                      <CancelOutlinedIcon
+                        onClick={() => handleRemove(item.id)}
+                      />
+                      <button onClick={() => handleRemove(item.id)}>
+                        Remove
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </table>
+          </div>
+          <div>dsasd</div>
+        </div>
+      </div>
+      {/* <div className="showbackground">
         <div className="fs-32 bold">ตะกร้าสินค้า</div>
         <div className="flex">
           <div className="cart_box">
@@ -49,9 +101,9 @@ const Cart = ({ cart, setCart, handleChange }) => {
             </div>
             <div>
               <span>TOTAL: {item.price}</span>
-              <CancelOutlinedIcon onClick={() => handleRemove(item.id)} />
-              {/* <button onClick={() => handleRemove(item.id)}>Remove</button> */}
-            </div>
+              <CancelOutlinedIcon onClick={() => handleRemove(item.id)} /> */}
+      {/* <button onClick={() => handleRemove(item.id)}>Remove</button> */}
+      {/* </div>
           </div>
         ))}
 
@@ -61,7 +113,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
         </div>
         <div className="order-summary-card">
           <div className="fs-32 bold">สรุปคำสั่งซื้อ</div>
-          <div className="flex space-between top-space">
+          <div className="flex space-between">
             <div className="bold">ยอดรวม</div>
             <div className="bold">THB{price}</div>
           </div>
@@ -76,8 +128,8 @@ const Cart = ({ cart, setCart, handleChange }) => {
           <div className="payment-button margin-top-16 bold margin-top-48">
             ไปชำระเงิน
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </>
   );
 };

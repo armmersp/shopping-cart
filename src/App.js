@@ -1,16 +1,16 @@
 import { React, useEffect, useState } from "react";
-import Navbar from "./components/navbar";
-import Cart from "./components/cart";
-import Amazon from "./components/amazon";
-import Amazon2 from "./components/Amazon2";
-// import RecommendSeller from "./bestSellerProducts";
-// import BestSeller from "./components/bestSellerList";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
+import Cart from "./pages/cart/Cart";
+import Home from "./pages/home/Home";
+import ProductDetail from "./pages/productDetail/ProductDetail";
+import Navbar from "./components/Navbar/Navbar";
+import recommendProducts from "./data/recommendProducts";
+
 const App = () => {
-  const [show, setShow] = useState(true);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(recommendProducts); //default is array
   const [payment, setPayment] = useState([]);
 
-  const handleClick = (item) => {
+  const handleAddToCart = (item) => {
     if (cart.indexOf(item) !== -1) return;
     setCart([...cart, item]);
   };
@@ -30,35 +30,26 @@ const App = () => {
 
   return (
     <>
-      <Navbar setShow={setShow} size={cart.length} />
-      <div className="homepage-space">
-        <div className="background-cover" />
-        <div className="top-space" />
-        <div className="flex-space-between">
-          <div className="topic-text">สินค้าขายดี</div>
-          <div className="sub-topic-text">ดูสินค้าขายดีทั้งหมด</div>
-        </div>
-      </div>
-      {show ? (
-        <Amazon handleClick={handleClick} />
-      ) : (
-        <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
-      )}
-
-      <div className="flex-space-between">
-        <div className="topic-text">สินค้าแนะนำ</div>
-        <div className="sub-topic-text">ดูสินค้าขายดีทั้งหมด</div>
-      </div>
-      {show ? (
-        <Amazon2 handleClick={handleClick} />
-      ) : (
-        <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
-      )}
-      {/* <Navbar setShow={setShow} size={cart.length} /> */}
-      {/* <Amazon handleClick={handleClick} /> */}
-
-      {/* <RecommendSeller handleClick={handleClick} /> */}
-      {/* </div> */}
+      <BrowserRouter>
+        <Navbar size={cart.length} />
+        <Routes>
+          <Route
+            path="/cart"
+            element={
+              <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+            }
+          />
+          <Route
+            path="/product/:id"
+            element={<ProductDetail handleAddToCart={handleAddToCart} />}
+          />
+          {/* <Route path="/payment" element={<Payment />} /> */}
+          <Route
+            path="/"
+            element={<Home cart={cart} handleAddToCart={handleAddToCart} />}
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

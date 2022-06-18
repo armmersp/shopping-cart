@@ -1,0 +1,24 @@
+.add-to-cart-style{
+    width: 160px;
+    border-radius: 20px;
+    height: 40px;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+.center-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.shopping-cart-icon{
+    transform: scaleX(-1);
+    color: blue;
+    margin-top: 7px;
+}
+
+.add-to-cart-text{
+    color: blue;
+    margin-top: 4px;
+}
