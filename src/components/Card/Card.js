@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import AddToCartButton from "../AddToCartButton/AddToCartButton";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircle";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
+import Check from "../../images/icon/check.svg";
 const Cards = ({ item, handleAddToCart }) => {
   const { id, title, img, discountPrice, price, ratingValue, reviewValue } =
     item;
@@ -24,7 +24,7 @@ const Cards = ({ item, handleAddToCart }) => {
   return (
     <div className="product-card" onClick={routeToProduct}>
       <div className="green-color">
-        <CheckCircleRoundedIcon />
+        <img src={Check} />
         มีสินค้า
       </div>
       <img src={item.img} className="product-item" />
@@ -44,8 +44,10 @@ const Cards = ({ item, handleAddToCart }) => {
         <div className="review">Reviews({item.reviewValue})</div>
       </div>
       <div className="product-name">{item.title}</div>
-      <div className="line-through">THB{item.price.toFixed(2)}</div>
-      <div className="bold-price">THB{item.discountPrice.toFixed(2)}</div>
+      <div className="card-line-through-text">THB{item.price.toFixed(2)}</div>
+      <div className="card-default-bold-price">
+        THB{item.discountPrice.toFixed(2)}
+      </div>
     </div>
     // <div className="cards">
     //   <div className="available-product-button">

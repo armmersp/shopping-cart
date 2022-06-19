@@ -1,8 +1,9 @@
 .background-cover{
     width: 100%;
-    height: 360px;
+    height: 720px;
     background-color: grey;
     margin-bottom: 48px;
+    object-fit: cover;
 }
   
 .homepage-space{

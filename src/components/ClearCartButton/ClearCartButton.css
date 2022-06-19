@@ -1,0 +1,17 @@
+.clearcart-button-container{
+    width: 200px;
+    height: 36px;
+    background-color: #000000;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.clearcart-text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}

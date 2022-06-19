@@ -1,28 +1,37 @@
 import "./ProductDetail.css";
+import { useParams } from "react-router-dom";
 import { TextField } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Harry from "../../images/book/harry.jpg";
 import List from "../../components/List/List";
 import RecommendSeller from "../../data/recommendProducts";
-
+import BestSellerProducts from "../../data/bestSellerProducts";
+import ShareContent from "../../images/icon/sharecontent.svg";
 export default function ProductDetail({ handleAddToCart }) {
+  let { id } = useParams();
+  //merge array
+  const product = [...BestSellerProducts, ...RecommendSeller].find(
+    (product) => product.id === id
+  );
   return (
     <>
       <div className="container-product-content">
-        <img src={Harry} alt="Harry" className="product-picture" />
+        <img src={product.img} alt="Harry" className="product-picture" />
         <div>
-          <div className="product-detail-name">
-            แฮร์รี่ พอตเตอร์กับภาคีนกฟีนิกซ์
+          <div className="product-detail-name">{product.title}</div>
+          <div className="product-detail">ผู้เขียน: {product.author}</div>
+          <div className="product-detail">สำนักพิมพ์: {product.publisher}</div>
+          <div className="product-detail">หมวดหมู่: {product.bookType}</div>
+          <div className="product-detail">ประเภทของสินค้า: {product.type}</div>
+          <div className="product-detail">
+            บาร์โค้ด: {product.barcode * 100000000000000000}
           </div>
-          <div className="product-detail">ผู้เขียน: เจ เค โรลว์ลิง</div>
-          <div className="product-detail">สำนักพิมพ์: Piccolo</div>
-          <div className="product-detail">หมวดหมู่: วรรณกรรม เรื่องสั้น</div>
-          <div className="product-detail">ประเภทของสินค้า: หนังสือ</div>
-          <div className="product-detail">บาร์โค้ด: 12345678765431</div>
           <div className="price-in-row">
             <div className="price-text">ราคา </div>
-            <div className="price-thb">THB499.00 </div>
-            <div className="price-thb-discount">THB599.00 </div>
+            <div className="price-thb">THB{product.price.toFixed(2)} </div>
+            <div className="price-thb-discount">
+              THB{product.discountPrice.toFixed(2)}
+            </div>
           </div>
           <div className="input-number">
             <TextField
@@ -39,18 +48,26 @@ export default function ProductDetail({ handleAddToCart }) {
               Wishlist
             </div>
           </div>
-          <div className="product-detail">แชร์:</div>
+          <div className="product-detail">
+            แชร์:
+            <img src={ShareContent}></img>
+          </div>
         </div>
       </div>
       <div className="row-sub-product-picture">
-        <img src={Harry} alt="Harry" className="sub-product-picture" />
-        <img src={Harry} alt="Harry" className="behind-sub-product-picture" />
+        <img src={product.img} alt="Harry" className="sub-product-picture" />
+        <img
+          src={product.img}
+          alt="Harry"
+          className="behind-sub-product-picture"
+        />
       </div>
       <div className="row-about-product-detail">
         <div className="about-product-detail">เกี่ยวกับสินค้า</div>
         <div className="about-product-sub-detail">รายละเอียด</div>
       </div>
-      <div className="topic-book-detail">รายละเอียด</div>
+      <div className="detail-border-line"></div>
+      <div className="topic-book-detail">รายละเอียด: {product.title}</div>
       <div className="book-detail">
         เรื่องราวเริ่มต้นว่าด้วยเด็กชาย แฮร์รี่ พ็อตเตอร์
         ที่อาศัยอยู่กับครอบครัวเดอร์สลีย์
@@ -76,12 +93,13 @@ export default function ProductDetail({ handleAddToCart }) {
         ซึ่งรายละเอียดในจดหมายคือ “แฮร์รี่
         ได้เข้าไปเรียนในโรงเรียนเวทมนต์ฮอกวอตส์”
       </div>
-      <div className="detail-topic-text">สินค้าที่เกี่ยวข้อง</div>
-      <List
-        title="สินค้าที่เกี่ยวข้อง"
-        productList={RecommendSeller}
-        handleAddToCart={handleAddToCart}
-      />
+      <div className="product-topic-wrapper">
+        <List
+          title="สินค้าที่เกี่ยวข้อง"
+          productList={RecommendSeller}
+          handleAddToCart={handleAddToCart}
+        />
+      </div>
     </>
   );
 }

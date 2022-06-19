@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Cart.css";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
+import ContinueShopping from "../../components/ContinueShopping/ContinueShoppingButton";
+import ClearCartButton from "../../components/ClearCartButton/ClearCartButton";
+import GoToPayment from "../../components/GoToPaymentButton/GoToPayment";
+import EditIcon from "../../images/icon/edit.svg";
+import RemoveIcon from "../../images/icon/remove.svg";
+
 const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0);
 
@@ -24,7 +30,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
     <>
       <div className="cart-container">
         <div className="cart-topic">ตะกร้าสินค้า</div>
-        <div className="summary-container">
+        <div className="cart-summary-container">
           <div>
             <table className="cart-table">
               <tr className="cart-table-header">
@@ -39,11 +45,13 @@ const Cart = ({ cart, setCart, handleChange }) => {
                   <td>
                     <div className="cart-detail">
                       <img src={item.img} alt="" />
-                      <p>{item.title}</p>
+                      <div>{item.title}</div>
                     </div>
                   </td>
                   <td>
-                    <div className="cart-price-table">THB{item.price}</div>
+                    <div className="cart-price-table">
+                      THB{item.price.toFixed(2)}
+                    </div>
                   </td>
                   <td>
                     <div className="cart-input-button">
@@ -54,24 +62,47 @@ const Cart = ({ cart, setCart, handleChange }) => {
                   </td>
                   <td>
                     <div className="cart-total-price-table">
-                      TOTAL: {item.price}
+                      THB{item.price.toFixed(2)}
                     </div>
                   </td>
                   <td>
                     <div className="cart-action-table">
-                      <CancelOutlinedIcon
+                      <img
+                        src={RemoveIcon}
+                        onClick={() => handleRemove(item.id)}
+                      ></img>
+                      <img
+                        src={EditIcon}
                         onClick={() => handleRemove(item.id)}
                       />
-                      <button onClick={() => handleRemove(item.id)}>
-                        Remove
-                      </button>
                     </div>
                   </td>
                 </tr>
               ))}
             </table>
+            <div className="cart-button">
+              <ContinueShopping />
+              <div className="cart-button-space"></div>
+              <ClearCartButton />
+            </div>
           </div>
-          <div>dsasd</div>
+          <div className="cart-summary-card">
+            <div className="cart-summary-topic">สรุปคำสั่งซื้อ</div>
+            <div className="cart-summary-flex">
+              <div className="cart-summary-text">ยอดรวม</div>
+              <div className="cart-summary-text">THB{price.toFixed(2)}</div>
+            </div>
+            <div className="cart-summary-flex">
+              <div className="cart-summary-text">ค่าส่ง</div>
+              <div className="cart-summary-text">THB1.00</div>
+            </div>
+            <div className="cart-summary-border-line"></div>
+            <div className="cart-summary-flex">
+              <div className="cart-summary-text">ยอดสุทธิ</div>
+              <div className="cart-summary-text">{(price + 1).toFixed(2)}</div>
+            </div>
+            <GoToPayment />
+          </div>
         </div>
       </div>
       {/* <div className="showbackground">

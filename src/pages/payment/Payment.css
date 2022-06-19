@@ -1,7 +1,11 @@
+.payment-flex{
+  display: flex;
+}
+
 .grid-payment {
     display: grid;
     grid-template-columns: auto 200px;
-    grid-template-rows: 50px minmax(160px, auto) auto;
+    grid-template-rows: 120px minmax(160px, auto) auto;
     grid-template-areas: 
       'header header'
       'main rightbar'
@@ -101,6 +105,8 @@
   .payment-topic-style{
     font-size: 32px;
     margin-top: 10px;
+    font-weight: 600;
+    margin-bottom: 29px;
   }
 
   .type-of-shipping-space{
@@ -154,6 +160,8 @@
     height: 0;
     background-color: aqua;
     border: 1px solid #CCCCCC;
+    margin-top: 12px;
+    margin-bottom: 34px;
     
   }
 
@@ -164,4 +172,40 @@
 
   .margin-left{
     margin-left: 12px;
+  }
+
+  .payment-summary-card{
+    width: 362px;
+    height: 377px;
+    background-color: #F5F9FF;
+    margin-left: 54px;
+    border: 24px;
+  }
+  
+  .payment-summary-topic{
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .payment-summary-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 30px;
+  }
+  
+  .payment-summary-border-line{
+    padding: 24px 0px 24px 0px;
+    border-bottom: 1px solid #CCCCCC;
+    margin-left: 24px;
+    margin-right: 30px;
+    margin-bottom: 28px;
+  }
+  
+  .payment-summary-text{
+    font-size: 13px;
+    font-weight: bold;
   }

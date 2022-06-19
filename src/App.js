@@ -2,12 +2,14 @@ import { React, useEffect, useState } from "react";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import Cart from "./pages/cart/Cart";
 import Home from "./pages/home/Home";
+import Payment from "./pages/payment/Payment";
 import ProductDetail from "./pages/productDetail/ProductDetail";
 import Navbar from "./components/Navbar/Navbar";
-import recommendProducts from "./data/recommendProducts";
+
+// import recommendProducts from "./data/recommendProducts";
 
 const App = () => {
-  const [cart, setCart] = useState(recommendProducts); //default is array
+  const [cart, setCart] = useState([]); //default is array
   const [payment, setPayment] = useState([]);
 
   const handleAddToCart = (item) => {
@@ -43,7 +45,10 @@ const App = () => {
             path="/product/:id"
             element={<ProductDetail handleAddToCart={handleAddToCart} />}
           />
-          {/* <Route path="/payment" element={<Payment />} /> */}
+          <Route
+            path="/payment"
+            element={<Payment handleChange={handleChange} />}
+          />
           <Route
             path="/"
             element={<Home cart={cart} handleAddToCart={handleAddToCart} />}

@@ -2,23 +2,24 @@
     width: 160px;
     border-radius: 20px;
     height: 40px;
-    border: 2px solid blue;
+    border: 2px solid #0156FF;
     cursor: pointer;
+    margin-bottom: 35px;
 }
 
 .center-button{
     display: flex;
     justify-content: center;
-    margin-top: 6px;
+    margin-top: 3px;
 }
 
 .shopping-cart-icon{
     transform: scaleX(-1);
-    color: blue;
+    color: #0156FF;
     margin-top: 7px;
 }
 
 .add-to-cart-text{
-    color: blue;
+    color: #0156FF;
     margin-top: 4px;
 }
