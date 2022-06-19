@@ -2,11 +2,11 @@ import "./ProductDetail.css";
 import { useParams } from "react-router-dom";
 import { TextField } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import Harry from "../../images/book/harry.jpg";
 import List from "../../components/List/List";
 import RecommendSeller from "../../data/recommendProducts";
 import BestSellerProducts from "../../data/bestSellerProducts";
 import ShareContent from "../../images/icon/sharecontent.svg";
+
 export default function ProductDetail({ handleAddToCart }) {
   let { id } = useParams();
   //merge array

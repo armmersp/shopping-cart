@@ -5,7 +5,6 @@ import {
   ShoppingCartOutlined as CartIcon,
   AccountCircleRounded as AccountIcon,
 } from "@mui/icons-material";
-import Avatar from "@mui/material/Avatar";
 import { useNavigate } from "react-router-dom";
 const Navbar = ({ size }) => {
   let navigate = useNavigate();
@@ -16,7 +15,7 @@ const Navbar = ({ size }) => {
   };
 
   const routeToCart = () => {
-    let path = "cart";
+    let path = "/cart";
     navigate(path);
   };
   return (

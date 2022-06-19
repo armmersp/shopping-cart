@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import RecommendSeller from "../../data/recommendProducts";
+import { SwiperSlide, Swiper } from "swiper/react";
 import Cards from "../Card/Card";
 import "./List.css";
+import { Navigation, Pagination } from "swiper";
 
 const List = ({ title, productList, handleAddToCart }) => {
   return (
@@ -10,11 +11,24 @@ const List = ({ title, productList, handleAddToCart }) => {
         <div className="topic-text">{title}</div>
         <div className="sub-topic-text">ดูสินค้าขายดีทั้งหมด</div>
       </div>
-      <div className="list-wrapper">
+      <Swiper
+        spaceBetween={30}
+        effect={"fade"}
+        slidesPerView={5}
+        navigation={true}
+        modules={[Navigation, Pagination]}
+        className="list-wrapper"
+      >
         {productList.map((item) => (
-          <Cards key={item.id} item={item} handleAddToCart={handleAddToCart} />
+          <SwiperSlide>
+            <Cards
+              key={item.id}
+              item={item}
+              handleAddToCart={handleAddToCart}
+            />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };

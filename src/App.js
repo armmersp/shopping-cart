@@ -45,10 +45,7 @@ const App = () => {
             path="/product/:id"
             element={<ProductDetail handleAddToCart={handleAddToCart} />}
           />
-          <Route
-            path="/payment"
-            element={<Payment handleChange={handleChange} />}
-          />
+          <Route path="/payment" element={<Payment cart={cart} />} />
           <Route
             path="/"
             element={<Home cart={cart} handleAddToCart={handleAddToCart} />}

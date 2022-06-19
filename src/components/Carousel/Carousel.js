@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Vlr from "../../images/valorant.jpg";
 import Demonslayer from "../../images/Demonslayer.jpg";
 import HarryPotter from "../../images/Harrypotter.jpg";
 import Jujutsu from "../../images/Jujutsu.jpg";

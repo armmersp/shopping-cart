@@ -164,8 +164,6 @@
 }
 
 .product-topic-wrapper{
-    display: flex;
-    justify-content: space-between;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 130px;
@@ -175,3 +173,4 @@
     border-bottom: 1px solid #CCCCCC;
     margin-top: 39px;
 }
+

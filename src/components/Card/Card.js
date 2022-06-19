@@ -3,8 +3,6 @@ import "./Card.css";
 import Rating from "@mui/material/Rating";
 import { useNavigate } from "react-router-dom";
 import AddToCartButton from "../AddToCartButton/AddToCartButton";
-import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircle";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Check from "../../images/icon/check.svg";
 const Cards = ({ item, handleAddToCart }) => {
   const { id, title, img, discountPrice, price, ratingValue, reviewValue } =
@@ -12,7 +10,7 @@ const Cards = ({ item, handleAddToCart }) => {
 
   let navigate = useNavigate();
   const routeToProduct = () => {
-    let path = `product/${id}`;
+    let path = `/product/${id}`;
     navigate(path);
   };
 
